@@ -39,7 +39,7 @@ $senha = filter_input(INPUT_POST,'senha');
 		} 
 
 	} else {
-		$_SESSION['campo_em_aberto'] = "<p style='color:green;'>Há campo(s) em aberto! Tente novamente.</p>";
+		$_SESSION['campo_em_aberto'] = "Há campo(s) em aberto! Tente novamente.</p>";
 		header("Location: cadastro.php");
 		exit;
 	}			
