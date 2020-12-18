@@ -89,3 +89,13 @@ a:hover {
     text-decoration: underline;
 }
 
+@media(max-width:1130px) {
+
+    body {
+        background-image: url("../imagens/fundo2.jpg");            
+        background-size: 100%;
+        background-position: 50% 30%;
+               
+    }
+}
+
