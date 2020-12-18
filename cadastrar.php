@@ -2,14 +2,14 @@
 session_start();
 include("conexao.php");
 
-$nome = filter_input(INPUT_POST,'nome');
-$telefone = filter_input(INPUT_POST,'telefone');
-$email = filter_input(INPUT_POST,'email');
-$senha = filter_input(INPUT_POST,'senha');
+$nome_usuario = filter_input(INPUT_POST,'nome_usuario');
+$telefone_usuario = filter_input(INPUT_POST,'telefone_usuario');
+$email_usuario = filter_input(INPUT_POST,'email_usuario');
+$senha_usuario = filter_input(INPUT_POST,'senha_usuario');
 
-	if ($nome && $telefone && $email && $senha) {
+	if ($nome_usuario && $telefone_usuario && $email_usuario && $senha_usuario) {
 		
-		$sql = "SELECT count(*) AS total FROM usuarios WHERE email = '$email'";
+		$sql = "SELECT count(*) AS total FROM usuarios WHERE email_usuario = '$email_usuario'";
 		$result = mysqli_query($conexao, $sql);
 		$row = mysqli_fetch_assoc($result);
 
@@ -20,7 +20,7 @@ $senha = filter_input(INPUT_POST,'senha');
 
 		} else {
 
-			$sql = "INSERT INTO usuarios (nome, telefone, email, senha) VALUES ('$nome', '$telefone', '$email', md5('$senha'))";
+			$sql = "INSERT INTO usuarios (nome_usuario, telefone_usuario, email_usuario, senha_usuario, data_cadastro) VALUES ('$nome_usuario', '$telefone_usuario', '$email_usuario', md5('$senha_usuario'), NOW())";
 			$resultado_usuario = mysqli_query($conexao, $sql);
 	
 			if(mysqli_insert_id($conexao)){
@@ -39,7 +39,7 @@ $senha = filter_input(INPUT_POST,'senha');
 		} 
 
 	} else {
-		$_SESSION['campo_em_aberto'] = "Há campo(s) em aberto! Tente novamente.</p>";
+		$_SESSION['campo_em_aberto'] = "Há campo(s) em aberto! Tente novamente.";
 		header("Location: cadastro.php");
 		exit;
 	}			

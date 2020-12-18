@@ -43,9 +43,9 @@ CREATE TABLE `avaliacao` (
 CREATE TABLE `usuarios` (
   `id_usuario` int(11) NOT NULL,
   `nome_usuario` varchar(30) NOT NULL,
-  `telefone_usuario` int(11) NOT NULL,
+  `telefone_usuario` varchar(20) NOT NULL,
   `email_usuario` varchar(40) NOT NULL,
-  `senha_usuario` varchar(15) NOT NULL,
+  `senha_usuario` varchar(32) NOT NULL,
   `data_cadastro` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

@@ -14,10 +14,10 @@ session_start();
     <div id="corpo-form">
         <h1>Cadastro</h1>
         <form method="POST" action="cadastrar.php">
-            <input type="text" name="nome" placeholder="Nome Completo" maxlength="30">
-            <input type="text" name="telefone" placeholder="Telefone" maxlength="30">
-            <input type="email" name="email" placeholder="Usuário" maxlength="40">
-            <input type="password" name="senha" placeholder="Senha" maxlength="15">            
+            <input type="text" name="nome_usuario" placeholder="Nome Completo" maxlength="30">
+            <input type="tel" name="telefone_usuario" placeholder="Telefone" maxlength="20">
+            <input type="email" name="email_usuario" placeholder="Usuário" maxlength="40">
+            <input type="password" name="senha_usuario" placeholder="Senha" maxlength="32">            
             <input type="submit" value="CADASTRAR">           
         </form>
 
