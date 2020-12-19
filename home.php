@@ -28,7 +28,13 @@ include('verifica_login.php');
             </li>
             <li><a href="rede_local.php">Rede Local</a></li>
             <li><a href="requisitos.php">Requisitos</a></li>
-            <li><a href="avaliacao.php">Avaliação</a></li>
+            <li>
+                <a href="#">Avaliação</a>
+                    <ul>
+                        <li><a href="avaliacao.php">Avalie</a></li>
+                        <li><a href="consulta.php">Histórico</a></li>
+                    </ul>            
+            </li>
             <li><a href="contato.php">Contato</a></li>
             <li>
                 <a href="#">Logout</a>

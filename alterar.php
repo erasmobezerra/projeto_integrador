@@ -1,3 +1,29 @@
+<?php 
+require 'config.php';
+
+$info = [];
+$id_avaliador = filter_input(INPUT_GET, 'id_avaliador');
+if($id){
+
+    $sql = $pdo->prepare("SELECT * FROM avaliacao WHERE id_avaliador = :id_avaliador");
+    $sql->bindValue(':id_avaliador', $id_avaliador);
+    $sql->execute();
+
+    if($sql->rowCount() > 0){
+
+        $info = $sql->fetch( PDO::FETCH_ASSOC );
+           
+    } else {
+        header("Location: alterar.php");
+        exit;
+    }
+    
+} else {
+    header('Location: consulta.php');
+    exit;
+}
+?>
+
 <?php
 include('verifica_login.php');
 ?>
@@ -7,7 +33,7 @@ include('verifica_login.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaliaçao</title>
+    <title>Editando Avaliacao</title>
      <link rel="stylesheet" href="./css/style_menu.css">
 
     <style>
@@ -37,7 +63,7 @@ include('verifica_login.php');
     <label for="bt_menu">&#9776;</label>
 
     <nav class="menu">
-    <ul>
+        <ul>
             <li><a href="home.php">Home</a></li>
             <li>
                 <a href="#">Aplicativos</a>
@@ -48,13 +74,7 @@ include('verifica_login.php');
             </li>
             <li><a href="rede_local.php">Rede Local</a></li>
             <li><a href="requisitos.php">Requisitos</a></li>
-            <li>
-                <a href="#">Avaliação</a>
-                    <ul>
-                        <li><a href="avaliacao.php">Avalie</a></li>
-                        <li><a href="consulta.php">Histórico</a></li>
-                    </ul>            
-            </li>
+            <li><a href="avaliacao.php">Avaliação</a></li>
             <li><a href="contato.php">Contato</a></li>
             <li>
                 <a href="#">Logout</a>
@@ -73,9 +93,10 @@ include('verifica_login.php');
         <div class="contato">
             <h3>Formulário de avaliação</h3>
             <form class="form" method="POST" action="avaliar.php">
-                <input class="field" type="text" name="nome_avaliador" placeholder="Nome" maxlength="30"> 
-                <input class="field" type="email" name="email_avaliador" placeholder="Email" maxlength="40">
-                <textarea class="field" name="avaliacao" placeholder="Digite aqui sua avaliação sobre o site, recomendações, críticas..." maxlength="500"></textarea>
+                <input class="field" type="hidden" name="id" value="<?=$info['id_avaliador'];?>">
+                <input class="field" type="text" name="nome_avaliador" placeholder="Nome" maxlength="30" value="<?=$info['nome_avaliador'];?>">> 
+                <input class="field" type="email" name="email_avaliador" placeholder="Email" maxlength="40" value="<?=$info['email_avaliador'];?>">>
+                <textarea class="field" name="avaliacao" placeholder="Digite aqui sua avaliação sobre o site, recomendações, críticas..." maxlength="500" value="<?=$info['id_avaliador'];?>"></textarea>
                 <input class="field" type="submit" value="Enviar">            
             </form>
 
