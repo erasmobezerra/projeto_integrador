@@ -8,27 +8,8 @@ include('verifica_login.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliaçao</title>
-     <link rel="stylesheet" href="./css/style_menu.css">
-
-    <style>
-        body{font-family: Arial, Arial, Helvetica, sans-serif;}
-        .content{display:flex; justify-content: center;}
-        .contato{width: 100%; max-width:500px;}
-        .form{display: flex; flex-direction: column;}
-        .field{padding: 10px; margin-bottom: 15px; border: 1px solid #000; border-radius: 5px; font-family: Arial, Helvetica, sans-serif; font-size: 16px}
-        textarea{height: 150px;}
-        .alertas{
-            text-align: center;
-            color: red;
-            font-weight: bolder;
-            padding-top: 10px;
-            font-size: 25px
-        }
-        @media(min-width: 980px) {
-            .content{margin-top: 20px;}
-        }
-
-    </style>
+    <link rel="stylesheet" href="./css/style_menu.css">
+    <link rel="stylesheet" href="./css/style_alterar.css">   
 </head>
 
 <body>
@@ -37,7 +18,7 @@ include('verifica_login.php');
     <label for="bt_menu">&#9776;</label>
 
     <nav class="menu">
-    <ul>
+        <ul>
             <li><a href="home.php">Home</a></li>
             <li>
                 <a href="#">Aplicativos</a>
@@ -95,7 +76,7 @@ include('verifica_login.php');
                     echo $_SESSION['usuario_ja_avaliou'];
                     unset($_SESSION['usuario_ja_avaliou']);
                 }
-                ?>
+            ?>
         </div>               
     </section>
 </body>

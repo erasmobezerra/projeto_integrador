@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'config.php';
 
 $id_avaliador = filter_input(INPUT_POST, 'id_avaliador');
@@ -9,19 +10,30 @@ $avaliacao = filter_input(INPUT_POST,'avaliacao');
 
 if($id_avaliador && $nome_avaliador && $email_avaliador && $avaliacao) {
 
-    $sql = $pdo->prepare("UPDATE avaliacao SET nome_avaliador = :nome_avaliador, email_avaliador = :email_avaliador, avaliacao = :avaliacao  WHERE id_avaliador = :id_avaliador");
-    
-    $sql->bindValue(':nome_avaliador', $nome_avaliador); 
+    $sql = $pdo->prepare("SELECT * FROM avaliacao WHERE email_avaliador = '$email_avaliador'");
     $sql->bindValue(':email_avaliador', $email_avaliador);
-    $sql->bindValue(':avaliacao', $avaliacao);
-    $sql->bindValue(':id_avaliador', $id_avaliador);
     $sql->execute();
+
+    if($sql->rowCount() > 0) {
+
+        $sql = $pdo->prepare("UPDATE avaliacao SET nome_avaliador = :nome_avaliador, email_avaliador = :email_avaliador, avaliacao = :avaliacao  WHERE id_avaliador = :id_avaliador");
     
+        $sql->bindValue(':nome_avaliador', $nome_avaliador); 
+        $sql->bindValue(':email_avaliador', $email_avaliador);
+        $sql->bindValue(':avaliacao', $avaliacao);
+        $sql->bindValue(':id_avaliador', $id_avaliador);
+        $sql->execute();    
+    
+        header("Location: consulta.php");
+        exit;
+    
+    } else {     
+		header('Location: alterar.php');
+		exit;
+    }          
 
-    header("Location: consulta.php");
+} else {  
+    header("Location: alterar.php");
     exit;
+}			
 
-} else {
-    header('Location: avaliacao.php');
-    exit;
-}
