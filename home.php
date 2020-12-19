@@ -36,7 +36,7 @@ include('verifica_login.php');
                         <li><a href="logout.php">Clique aqui para sair</a></li>
                     </ul>         
             </li>
-            <li class="boasvindas">Olá, <?php echo $_SESSION['nome_usuario'];?></li>
+            <li class="menu_boasvindas">Olá, <?php echo $_SESSION['nome_usuario'];?></li>
         </ul>
         
     </nav>
