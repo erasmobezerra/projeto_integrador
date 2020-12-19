@@ -3,7 +3,7 @@ require 'config.php';
 
 $info = [];
 $id_avaliador = filter_input(INPUT_GET, 'id_avaliador');
-if($id){
+if($id_avaliador){
 
     $sql = $pdo->prepare("SELECT * FROM avaliacao WHERE id_avaliador = :id_avaliador");
     $sql->bindValue(':id_avaliador', $id_avaliador);
@@ -92,31 +92,14 @@ include('verifica_login.php');
     
         <div class="contato">
             <h3>Formulário de avaliação</h3>
-            <form class="form" method="POST" action="avaliar.php">
+            <form class="form" method="POST" action="alterar_action.php">
                 <input class="field" type="hidden" name="id" value="<?=$info['id_avaliador'];?>">
                 <input class="field" type="text" name="nome_avaliador" placeholder="Nome" maxlength="30" value="<?=$info['nome_avaliador'];?>">> 
                 <input class="field" type="email" name="email_avaliador" placeholder="Email" maxlength="40" value="<?=$info['email_avaliador'];?>">>
-                <textarea class="field" name="avaliacao" placeholder="Digite aqui sua avaliação sobre o site, recomendações, críticas..." maxlength="500" value="<?=$info['id_avaliador'];?>"></textarea>
+                <textarea class="field" name="avaliacao" placeholder="Digite aqui sua avaliação sobre o site, recomendações, críticas..." maxlength="500" value="<?=$info['avaliacao'];?>"></textarea>
                 <input class="field" type="submit" value="Enviar">            
             </form>
-
-            <?php
-
-                if(isset($_SESSION['msg_enviada'])) {
-                    echo $_SESSION['msg_enviada'];
-                    unset($_SESSION['msg_enviada']);                
-                } 
-
-                if(isset($_SESSION['campo_em_aberto'])) {
-                    echo $_SESSION['campo_em_aberto'];
-                    unset($_SESSION['campo_em_aberto']);
-                }
-
-                if(isset($_SESSION['usuario_ja_avaliou'])) {
-                    echo $_SESSION['usuario_ja_avaliou'];
-                    unset($_SESSION['usuario_ja_avaliou']);
-                }
-                ?>
+           
         </div>               
     </section>
 </body>

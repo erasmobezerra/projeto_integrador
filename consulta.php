@@ -30,8 +30,8 @@ if($sql->rowCount() > 0) {
             <td><?=$avaliacao['email_avaliador'];?></td>
             <td><?=$avaliacao['avaliacao'];?></td><td>
 
-               <a href="alterar.php?id=<?=$avaliacao['id_avaliador'];?>">[ Editar ]</a>
-               <a href="excluir.php?id=<?=$avaliacao['id_avaliador'];?>" onclick="return confirm('Tem certeza que deseja ecxluir?')">[ Excluir ]</a> 
+               <a href="alterar.php?id_avaliador=<?=$avaliacao['id_avaliador'];?>">[ Editar ]</a>
+               <a href="excluir.php?id_avaliador=<?=$avaliacao['id_avaliador'];?>" onclick="return confirm('Tem certeza que deseja ecxluir?')">[ Excluir ]</a> 
             </td>
         </tr>
     <?php endforeach; ?>

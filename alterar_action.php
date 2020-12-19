@@ -2,11 +2,9 @@
 require 'config.php';
 
 $id_avaliador = filter_input(INPUT_POST, 'id_avaliador');
-$nome_usuario = filter_input(INPUT_POST,'nome_usuario');
-$telefone_usuario = filter_input(INPUT_POST,'telefone_usuario');
-$email_usuario = filter_input(INPUT_POST,'email_usuario');
-$senha_usuario = filter_input(INPUT_POST,'senha_usuario');
-
+$nome_avaliador = filter_input(INPUT_POST,'nome_avaliador');
+$email_avaliador = filter_input(INPUT_POST,'email_avaliador');
+$avaliacao = filter_input(INPUT_POST,'avaliacao');
 
 
 if($id_avaliador && $nome_avaliador && $email_avaliador && $avaliacao) {
