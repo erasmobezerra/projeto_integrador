@@ -9,7 +9,7 @@ include('verifica_login.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliaçao</title>
     <link rel="stylesheet" href="./css/style_menu.css">
-    <link rel="stylesheet" href="./css/style_alterar.css">   
+    <link rel="stylesheet" href="./css/style_avaliacao.css">   
 </head>
 
 <body>

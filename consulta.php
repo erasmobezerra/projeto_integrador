@@ -7,7 +7,7 @@ include('verifica_login.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editando Avaliacao</title>
+    <title>Histórico de avaliações</title>
     <link rel="stylesheet" href="./css/style_menu.css">
     <link rel="stylesheet" href="./css/style_alterar.css">    
 </head>
@@ -69,36 +69,46 @@ if($sql->rowCount() > 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style_lista.css">    
+    <link rel="stylesheet" href="./css/style_tabela.css">    
 </head>
 </head>
 <body>
     
 </body>
 </html>
-<h1>Veja aqui as avaliações já realizadas!</h1>
 
-<table border="1" width="100%">
-    <tr>
-        <th>ID</th>    
-        <th>NOME</th>
-        <th>EMAIL</th>
-        <th>AVALIACAO</th>
-        <th>OPÇÕES</th>        
-    </tr>
+<table>
+    <caption>Veja aqui as avaliações já realizadas!</caption>
+    <thead>
+        <tr>
+            <th>ID</th>    
+            <th>NOME</th>
+            <th>EMAIL</th>
+            <th>AVALIACAO</th>
+            <th>OPÇÕES</th>        
+        </tr>
+    </thead>
 
     <?php foreach($lista as $avaliacao): ?>
-        <tr>
-            <td><?=$avaliacao['id_avaliador'];?></td>
-            <td><?=$avaliacao['nome_avaliador'];?></td>
-            <td><?=$avaliacao['email_avaliador'];?></td>
-            <td><?=$avaliacao['avaliacao'];?></td><td>
+        <tbody>
+            <tr>
+                <td><?=$avaliacao['id_avaliador'];?></td>
+                <td><?=$avaliacao['nome_avaliador'];?></td>
+                <td><?=$avaliacao['email_avaliador'];?></td>
+                <td><?=$avaliacao['avaliacao'];?></td><td>
 
-               <a href="alterar.php?id_avaliador=<?=$avaliacao['id_avaliador'];?>">[ Editar ]</a>
-               <a href="excluir.php?id_avaliador=<?=$avaliacao['id_avaliador'];?>" onclick="return confirm('Tem certeza que deseja ecxluir?')">[ Excluir ]</a> 
-            </td>
-        </tr>
+                <a href="alterar.php?id_avaliador=<?=$avaliacao['id_avaliador'];?>">[ Editar ]</a>
+                <a href="excluir.php?id_avaliador=<?=$avaliacao['id_avaliador'];?>" onclick="return confirm('Tem certeza que deseja ecxluir?')">[ Excluir ]</a> 
+                </td>
+            </tr>
+        </tbody>
     <?php endforeach; ?>
+
+    <tfoot>
+        <tr>
+            <td colspan="5">Agência de Turismo Viage Seguro</td>
+        </tr>
+    </tfoot>
     
 </table>
 <br>
