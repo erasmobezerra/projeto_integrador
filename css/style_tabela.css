@@ -24,7 +24,7 @@ thead th {
 tbody {
     font-size: 90%;   
     letter-spacing: 1px;
-    background-color: burlywood;
+    background-color: rgb(135, 222, 157);
 }
 
 tbody tr td {
@@ -52,7 +52,7 @@ tr a:hover {
 tfoot {
     font-weight: bold;
     font-size: 75%;    
-    background-color: cyan; 
+    background-color: bisque; 
 }
 
 tfoot tr td {
