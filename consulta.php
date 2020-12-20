@@ -84,7 +84,7 @@ if($sql->rowCount() > 0) {
             <th>ID</th>    
             <th>NOME</th>
             <th>EMAIL</th>
-            <th>AVALIACAO</th>
+            <th>AVALIAÇÃO</th>
             <th>OPÇÕES</th>        
         </tr>
     </thead>
@@ -97,7 +97,7 @@ if($sql->rowCount() > 0) {
                 <td><?=$avaliacao['email_avaliador'];?></td>
                 <td><?=$avaliacao['avaliacao'];?></td><td>
 
-                <a href="alterar.php?id_avaliador=<?=$avaliacao['id_avaliador'];?>">[ Editar ]</a>
+                <a href="alterar.php?id_avaliador=<?=$avaliacao['id_avaliador'];?>" class="">[ Editar ]</a>
                 <a href="excluir.php?id_avaliador=<?=$avaliacao['id_avaliador'];?>" onclick="return confirm('Tem certeza que deseja ecxluir?')">[ Excluir ]</a> 
                 </td>
             </tr>
