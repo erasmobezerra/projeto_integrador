@@ -2,7 +2,6 @@
 include('verifica_login.php');
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
