@@ -28,7 +28,14 @@ p {
     padding-bottom: 30px;    
 }
 
+.app_mobile img {
+    margin-right: 30px;
+}
 
-
+@media(max-width: 1190px) {
+    .app_mobile img {
+        margin-bottom: 30px;
+    }
+}
 
 

@@ -51,7 +51,7 @@ include('verifica_login.php');
         <h1>Aplicativo Desktop</h1>
 
         <p>
-            No final deste curso, fomos desafiados a construir um programa desktop utilizando a linguagem de programação orientada à objetos, a linguagem Java. 
+            No final deste curso, fomos desafiados a construir um programa desktop utilizando a linguagem de programação orientada à objetos, a linguagem Java, que nos foi ensinada na disciplina Desenvolvimento de Aplicações Desktop.
         </p>
 
         <p>
