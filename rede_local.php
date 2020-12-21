@@ -69,7 +69,8 @@ include('verifica_login.php');
                     <th>PC</th>    
                     <th>NOTEBOOK</th>
                     <th>SERVIDOR</th>
-                    <th>SWITCH</th>                           
+                    <th>SWITCH</th>        
+                    <th>ROTEADOR</th>                   
                 </tr>
             </thead>
 
@@ -79,6 +80,7 @@ include('verifica_login.php');
                     <td>7</td>
                     <td>1</td>
                     <td>2</td>
+                    <td>1</td>
                 </tr>
             </tbody>
         </table>

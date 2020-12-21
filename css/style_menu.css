@@ -20,6 +20,7 @@
     background-color: #222;
     font-family: cursive;
     
+    
 }
 
 .menu ul {
@@ -39,11 +40,13 @@
     text-align: center;
     background-color: #222;
     color: white;
+    transition: all .4s;
 }
 
 .menu ul ul {
     position: absolute;
     visibility: hidden;
+    
 }
 
 .menu ul li:hover ul {
