@@ -112,8 +112,8 @@ if($sql->rowCount() > 0) {
     </tfoot>
     
 </table>
-<p><a href="criarpdf_lista.php">[ Gerar relatório geral ]</a></p>
-<br>
+
+<p style="text-align: center;"><a href="criarpdf_lista.php">[ Gerar relatório geral ]</a></p>
 
 </body>
 </html>
