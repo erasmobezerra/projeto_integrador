@@ -11,6 +11,7 @@ include('verifica_login.php');
     <title>Contato</title>
     <link rel="stylesheet" href="./css/style_menu.css">
     <link rel="stylesheet" href="./css/style_corpo.css">
+    <link rel="stylesheet" href="./css/style_tabela.css">
 </head>
 <body>
     <input type="checkbox" id="bt_menu">
@@ -43,9 +44,40 @@ include('verifica_login.php');
                     </ul>         
             </li>
             <li class="menu_boasvindas">Olá, <?php echo $_SESSION['nome_usuario'];?></li>
-        </ul>
-        
+        </ul>        
     </nav>
+
+    <div class="container">       
+
+        <table>
+            <caption>Contato dos desenvolvedores do projeto</caption>
+            <thead>
+                <tr>
+                    <th>NOME</th>    
+                    <th>EMAIL</th>                                
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Erasmo Ribeiro Bezerra</td>
+                    <td>erasmobcs09.2@gmail.com</td>                   
+                </tr>
+                <tr>
+                    <td>Laura</td>
+                    <td>laurasevero321@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Lucas</td>
+                    <td>lucasmelopessoadasilva@hotmail.com</td>
+                </tr>
+                <tr>
+                    <td>Ítalo</td>
+                    <td>Italodaluzlatorre0@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 
 </body>
