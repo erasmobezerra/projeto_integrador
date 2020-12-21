@@ -3,14 +3,15 @@
     padding: 0;
     text-decoration: none;
     font-family: cursive;
+    
 }
 
 .container {
     margin: 70px 100px;
-    font-size: 25px;
     background-color: #ddd9ce;
     border-radius: 1%;
     padding: 15px;
+    font-size: 18px;
 }
 
 .container h1 {
@@ -21,5 +22,13 @@
 p {
     margin-bottom: 20px;
 }
+
+.rede_local img {
+    display: block;
+    padding-bottom: 30px;    
+}
+
+
+
 
 

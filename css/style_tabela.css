@@ -7,8 +7,9 @@ table {
 }
 
 caption {
-    font-size: 30px;
-    padding-bottom: 15px;
+    font-size: 15px;
+    padding-bottom: 10px;
+    font-weight: bolder;
 }
 
 thead {
