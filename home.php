@@ -49,7 +49,24 @@ include('verifica_login.php');
     
     <div class="container">
         
-        <h1>Início do texto</h1>
+        <h1>Boas-vindas!</h1>
+
+        <p>
+        Este é um trabalho de conclusão do curso de Técnico em Desenvolvimento de Sistemas, desenvolvido na ETE Jurandir Bezerra Lins, Igarassu/PE. Nossa equipe, formada por Ítalo da Luz La Torre, Laura Vitória da Silva Severo, Luccas e Erasmo Ribeiro Bezerra, elaborou este website com o objetivo de apresentar o Projeto Integrador II e III. 	
+        </p>
+
+        <p>
+        Neste projeto de conclusão de curso, criamos uma empresa fictícia, uma agência de turismo intitulada Viagem Seguro que realiza dentre outras funções, cadastro de clientes e agendamento de pacotes de viagens aéreas.  Mais detalhes dos aplicativos e da rede local, você encontrará navegando por este site.
+        </p>
+
+        <p>
+        Navegando pelo Menu acima, você encontrará informações a respeito dos nossos aplicativos desenvolvidos para desktop e mobile; descrição e imagens da simulação da nossa rede local; descrição sobre os requisitos de engenharia de software que utilizamos no desenvolvimento dos aplicativos e deste website; uma página para que você possa realizar uma avaliação crítica do nosso projeto, elogios, sugestões e o que mais puder contribuir conosco; por fim uma página que nossos dados de contato. 
+        </p>
+
+        <p>
+        Agrademos todo apoio e dedicação que o corpo docente da instituição nos proporcionou, dos nossos familiares e amigos que contribuíram direta e indiretamente para este breve e importante jornada que embora tenha fim em dezembro, virão muitas outras pela frente. 
+        </p>
+
        
     </div>
     
